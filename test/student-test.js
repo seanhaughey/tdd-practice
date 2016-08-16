@@ -25,6 +25,13 @@ describe('Student', function () {
       const jesse = new Student('Jesse', 'Houghton', 1000000000);
       assert.equal(jesse.fullName(), 'Jesse Houghton');
     });
+  });
+
+  describe('#formattedSalary()', function () {
+    it('should convert #salary into a currency', function () {
+      const wes = new Student('Wes', 'Hoover', 70000);
+      assert.equal(wes.formattedSalary(), '$70,000.00');
+    });
   })
 
 });
