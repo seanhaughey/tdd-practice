@@ -4,4 +4,8 @@ function Student(fn, ln, sal) {
   this.salary = sal
 };
 
+Student.prototype.fullName = function () {
+  return this.firstName + ' ' + this.lastName;
+};
+
 module.exports = Student;
