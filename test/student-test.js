@@ -1,3 +1,5 @@
+'use strict';
+
 const chai = require('chai');
 const assert = chai.assert;
 
@@ -32,6 +34,14 @@ describe('Student', function () {
       const wes = new Student('Wes', 'Hoover', 70000);
       assert.equal(wes.formattedSalary(), '$70,000.00');
     });
+  });
+
+  describe('#giveRaise()', function () {
+    it('should increment #salary by 10%', function () {
+      let richard = new Student('Richard', 'Davis', 70000);
+      richard.giveRaise();
+      assert.equal(richard.salary, 77000);
+    })
   })
 
 });

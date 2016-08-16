@@ -16,6 +16,11 @@ class Student {
   formattedSalary() {
     return accounting.formatMoney(this.salary);
   }
+
+  giveRaise() {
+    this.salary = this.salary * 1.1;
+  }
+
 };
 
 
